@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Aufgabenverwaltung</h1>
+
+    <h2>Aktuelle Aufgaben</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>Status</th>
+                <th>Beschreibung</th>
+                <th>Fälligkeitsdatum</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody id="tasks-table-body">
+            <!-- Hier kommt nichts rein, weil das von JavaScript generiert wird -->
+        </tbody>
+    </table>
+
+    <h2>Aufgaben bearbeiten</h2>
+    <form id="task-form">
+        <label for="title">Titel</label>
+        <input type="text" id="title" name="title" required>
+
+        <br>
+
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+            <option value="Nicht begonnen">Nicht begonnen</option>
+            <option value="In Bearbeitung">In Bearbeitung</option>
+            <option value="Beendet">Beendet</option>
+        </select>
+
+        <br>
+
+        <label for="description">Beschreibung</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <br>
+
+        <label for="dueDate">Fälligkeitsdatum</label>
+        <input type="datetime-local" id="dueDate" name="dueDate" required>
+
+        <button id="updateTask">Update Aufgabe</button>
+        <button id="insertTask">Insert Aufgabe</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
